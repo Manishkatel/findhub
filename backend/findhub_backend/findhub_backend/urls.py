@@ -32,7 +32,8 @@ def api_info(request):
             'swagger': f"{request.build_absolute_uri('/')[:-1]}/api/docs/",
             'redoc': f"{request.build_absolute_uri('/')[:-1]}/api/redoc/"
         },
-    })
+    }) 
+
 
 urlpatterns = [
     path('admin/', admin.site.urls),
@@ -57,6 +58,6 @@ if settings.DEBUG:
     urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
     urlpatterns += static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
 
-admin.site.site_header = "Party Spark Creator Hub Admin"
-admin.site.site_title = "Party Spark Admin"
-admin.site.index_title = "Welcome to Party Spark Administration" 
+admin.site.site_header = "FindHub Admin"
+admin.site.site_title = "find_hub Admin"
+admin.site.index_title = "Welcome to Find_Hub Administration" 
