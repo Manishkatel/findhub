@@ -17,7 +17,7 @@ class User(AbstractUser):
     id = models.UUIDField(primary_key=True, default=uuid.uuid4, editable=False)
     email = models.EmailField(unique=True, db_index=True)
     user_type = models.CharField(max_length=20, choices=USER_TYPES, default='creator')
-    is_verified = models.BooleanField(default=False)
+    is_verified = models.BooleanField(default=False) 
     is_premium = models.BooleanField(default=False)
     premium_expires_at = models.DateTimeField(null=True, blank=True)
     created_at = models.DateTimeField(auto_now_add=True)
